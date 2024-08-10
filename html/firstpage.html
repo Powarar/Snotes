@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--Форма для выбора-->
+
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                position: relative; 
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            .container {
+                width: 400px; 
+                height: 300px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+            }
+
+            .button-container {
+                display: flex;
+                gap: 10px; 
+            }
+
+            button {
+                background-color: #007BFF;
+                color: white;
+                padding: 15px 30px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+            .top-left-text {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 30px;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-left-text">SNotes</div>
+        <div class="container">
+            <h1>Choose your step:</h1>
+            <div class="button-container">
+                <form action="/addnote">
+                    <button>Add note</button>
+                </form>
+                <form action="/findnote">
+                    <button>Find note</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

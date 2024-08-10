@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+                position: relative; 
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            .container {
+                width: 400px; 
+                height: 400px; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 16px;
+                color: #333;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: #007BFF;
+                color: white;
+                padding: 15px 30px;
+                font-size: 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Add your <br> new note:</h1>
+            <form action="/noteadded" method="GET"> 
+                <label for="note">Note:</label>
+                <input type="text" name="content" id="note" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+
+                <button type="submit">Find</button>
+            </form>
+        </div>
+    </body>
+</html>
